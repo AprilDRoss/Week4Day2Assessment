@@ -8,47 +8,26 @@
    you'll need to parse through that first before you can start to
    write your logic.
 */
-var card_numbers = {
-  2: "2",
-  3: "3",
-  4: "4",
-  5: "5",
-  6: "6",
-  7: "7",
-  8: "8",
-  9: "9",
-  10: "10",
-};
 
-var face_cards = {
-  J: "10",
-  Q: "10",
-  K: "10",
-};
-var ace_card1 = 1;
-var ace_card11 = 11;
+var ace_card = [1,11];
 
 function handValue (hand) {
-  var hand_sum;
+  var output;
   //check to see if card number is in the array
 for (i = 0; i < hand.length; i ++){
-  if (card_numbers[hand[i]] === true){
-    hand_sum += card_numbers.indexOf("hand[i]");
+  if(hand[i]=== "J"|| "Q" || "K"){
+    output += 10;
   }
-  if(face_cards[hand[i]] === true){
-    hand_sum += face_cards.indexOf("hand[i]");
-  }
-
-  if(ace_card1[hand[i]] === true){
-    hand_sum += ace_card1.indexOf("ace_card1");
-  }
-  else{
-    hand_sum += acecard11.indexOf("acecard11");
+  elseif (hand[i]=== "A"){
+    output += ace_card[0||1];
   }
 
+  else (hand[i]=== "2"||"3"||"4"||"5"||"6"||"7"||"8"||"9"||"10") {
+    output += parseInt(hand[i]);
+
+  }
 }
-  return hand_sum;
-}
+return output;
 
 
 /* -----  Hints ------
