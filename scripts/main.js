@@ -18,16 +18,24 @@ for (i = 0; i < hand.length; i ++){
   if(hand[i]=== "J"|| "Q" || "K"){
     output += 10;
   }
-  elseif (hand[i]=== "A"){
-    output += ace_card[0||1];
+  else{
+    output = output;}
+  else{
+    if(hand[i]=== "A" && output === 10){
+      output += 11;
+    }
+    else(hand[i]=== "A" && output < 10){
+      output += 1;
+    }
   }
-
-  else (hand[i]=== "2"||"3"||"4"||"5"||"6"||"7"||"8"||"9"||"10") {
+  elseif (hand[i]=== "2"||"3"||"4"||"5"||"6"||"7"||"8"||"9"||"10") {
     output += parseInt(hand[i]);
+  }
 
   }
-}
+
 return output;
+console.lof(output);
 
 
 /* -----  Hints ------
