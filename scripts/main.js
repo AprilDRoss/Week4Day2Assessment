@@ -11,31 +11,26 @@
 
 var ace_card = [1,11];
 
-function handValue (hand) {
-  var output;
-  //check to see if card number is in the array
-for (i = 0; i < hand.length; i ++){
-  if(hand[i]=== "J"|| "Q" || "K"){
-    output += 10;
-  }
-  else{
-    output = output;}
-  else{
-    if(hand[i]=== "A" && output === 10){
-      output += 11;
-    }
-    else(hand[i]=== "A" && output < 10){
-      output += 1;
-    }
-  }
-  elseif (hand[i]=== "2"||"3"||"4"||"5"||"6"||"7"||"8"||"9"||"10") {
-    output += parseInt(hand[i]);
-  }
-
-  }
-
+function handValue(hand) {
+  var output = 0;
+for (var i = 0; i < hand.length; i++){
+if(hand[i] === "2"||hand[i] === "3"||hand[i] === "4"||hand[i] ==="5"||hand[i] ==="6"||hand[i] ==="7"||hand[i] ==="8"||hand[i] ==="9"||hand[i] ==="10"){
+  output += parseInt(hand[i]);
+}else if(hand[i] === "J"||hand[i] ==="Q"||hand[i] ==="K"){
+  output += 10;
+}else if (hand[i] === "A" && output < 11){
+  output += ace_card[1];
+}else if(hand[i] === "A" && output >= 11){
+  output += ace_card[0];
+} if (output > 21){
+  output = output - 10;
+}
+}
 return output;
-console.lof(output);
+
+
+}
+
 
 
 /* -----  Hints ------
